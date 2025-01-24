@@ -1,0 +1,17 @@
+.root {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px solid var(--gray8);
+    border-radius: 99999px;
+    padding: 6px 10px;
+
+    transition: background-color 0.2s ease;
+
+    cursor: pointer;
+}
+
+.root:hover {
+    background-color: var(--gray4);
+}

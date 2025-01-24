@@ -1,0 +1,13 @@
+@keyframes heartbeat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15); /* Aumenta un 20% */
+    }
+}
+
+div[aria-details="reaction-container"]:hover .icon {
+    animation: heartbeat 1s infinite ease-in-out;
+}

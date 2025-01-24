@@ -1,0 +1,11 @@
+.root {
+    background-color: var(--gray2);
+    border: 1px solid var(--gray4);
+    border-radius: 6px;
+    padding: 12px 24px;
+
+    display: flex;
+    justify-content: "space-between";
+    align-items: "center";
+    gap: 12px;
+}
