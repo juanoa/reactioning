@@ -1,14 +1,16 @@
 import { ReactionContainer } from "../reaction-container";
 import { HearthIcon } from "./hearth-icon";
+import { Reaction } from "../../reactions-container";
 import styles from "./hearth-reaction.module.css";
 
 interface Props {
-  count: number;
+  reaction: Reaction;
+  onClick: () => void;
 }
 
-export const HearthReaction = ({ count }: Props) => {
+export const HearthReaction = ({ reaction, onClick }: Props) => {
   return (
-    <ReactionContainer count={count}>
+    <ReactionContainer reaction={reaction} onClick={onClick}>
       <HearthIcon className={styles.icon} />
     </ReactionContainer>
   );

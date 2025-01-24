@@ -1,13 +1,15 @@
 import { RocketIcon } from "./rocket-icon";
 import { ReactionContainer } from "../reaction-container";
+import { Reaction } from "../../reactions-container";
 
 interface Props {
-  count: number;
+  reaction: Reaction;
+  onClick: () => void;
 }
 
-export const RocketReaction = ({ count }: Props) => {
+export const RocketReaction = ({ reaction, onClick }: Props) => {
   return (
-    <ReactionContainer count={count}>
+    <ReactionContainer reaction={reaction} onClick={onClick}>
       <RocketIcon />
     </ReactionContainer>
   );

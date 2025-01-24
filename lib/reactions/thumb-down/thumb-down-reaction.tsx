@@ -1,13 +1,15 @@
 import { ReactionContainer } from "../reaction-container";
 import { ThumbDownIcon } from "./thumb-down-icon";
+import { Reaction } from "../../reactions-container";
 
 interface Props {
-  count: number;
+  reaction: Reaction;
+  onClick: () => void;
 }
 
-export const ThumbDownReaction = ({ count }: Props) => {
+export const ThumbDownReaction = ({ reaction, onClick }: Props) => {
   return (
-    <ReactionContainer count={count}>
+    <ReactionContainer reaction={reaction} onClick={onClick}>
       <ThumbDownIcon />
     </ReactionContainer>
   );

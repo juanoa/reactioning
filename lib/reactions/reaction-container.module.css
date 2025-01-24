@@ -13,5 +13,9 @@
 }
 
 .root:hover {
+    background-color: var(--gray3);
+}
+
+.selected {
     background-color: var(--gray4);
 }
