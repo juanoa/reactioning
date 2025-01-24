@@ -1,6 +1,6 @@
 # Reactioning
 
-![Demo](assets/demo.gif)
+![Demo](https://raw.githubusercontent.com/juanoa/reactioning/refs/heads/bugfix/polish-readme/assets/demo.gif)
 
 Just a simple library to show beautiful reactions in your app.
 
