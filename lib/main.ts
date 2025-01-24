@@ -1,3 +1,11 @@
 import "./main.css";
 
-export { ReactionsContainer } from "./reactions-container";
+import { ReactionsContainer } from "./reactions-container";
+
+export type {
+  ReactionsContainerProps,
+  Reactions,
+  Reaction,
+} from "./reactions-container";
+
+export default ReactionsContainer;

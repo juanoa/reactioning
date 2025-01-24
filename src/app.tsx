@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { ReactionsContainer } from "../lib/main";
-import { Reactions } from "../lib/reactions-container";
+import ReactionsContainer, { Reactions } from "../lib/main";
 
 export const App = () => {
   const [reactions, setReactions] = useState<Reactions>({
