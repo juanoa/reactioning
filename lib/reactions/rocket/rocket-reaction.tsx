@@ -14,6 +14,8 @@ export const RocketReaction = ({ reaction, onClick }: Props) => {
 
   const handleClick = () => {
     onClick();
+    if (reaction.selected) return;
+
     setIsClicked(true);
     setTimeout(() => {
       setIsClicked(false);
