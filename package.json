@@ -1,5 +1,6 @@
 {
   "name": "reactioning",
+  "description": "Just a simple library to show beautiful reactions in your app.",
   "version": "0.3.0",
   "type": "module",
   "main": "dist/main.js",
@@ -40,5 +41,20 @@
     "vite": "6.0.5",
     "vite-plugin-dts": "4.5.0",
     "vite-plugin-lib-inject-css": "2.2.1"
-  }
+  },
+  "keywords": [
+    "react",
+    "reactions",
+    "library"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/reactioning.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/reactioning/issues"
+  },
+  "homepage": "https://github.com/yourusername/reactioning#readme"
 }
