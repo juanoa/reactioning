@@ -1,7 +1,7 @@
 {
   "name": "reactioning",
   "description": "Just a simple library to show beautiful reactions in your app.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
