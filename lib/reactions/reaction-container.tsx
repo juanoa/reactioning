@@ -1,5 +1,6 @@
 import styles from "./reaction-container.module.css";
 import { Reaction } from "../reactions-container";
+import NumberFlow from "@number-flow/react";
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   reaction: Reaction;
@@ -13,7 +14,7 @@ export const ReactionContainer = ({ children, reaction, ...props }: Props) => {
       {...props}
     >
       {children}
-      <span>{reaction.count}</span>
+      <NumberFlow value={reaction.count} />
     </div>
   );
 };
