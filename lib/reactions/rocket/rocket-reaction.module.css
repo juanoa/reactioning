@@ -1,0 +1,19 @@
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.animate {
+    animation: moveAndVibrate 1s ease;
+}
+
+@keyframes moveAndVibrate {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px, -10px) rotate(-10deg);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
