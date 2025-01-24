@@ -1,3 +1,3 @@
-export function helloAnything(thing: string): string {
-  return `Hello ${thing}!`;
-}
+import "./main.css";
+
+export { ReactionsContainer } from "./reactions-container";

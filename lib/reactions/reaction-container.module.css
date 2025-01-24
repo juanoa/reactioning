@@ -1,0 +1,25 @@
+.root {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px solid var(--gray8);
+    border-radius: 99999px;
+    padding: 8px 12px;
+
+    transition: background-color 0.2s ease;
+
+    cursor: pointer;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.root:hover {
+    background-color: var(--gray3);
+}
+
+.selected {
+    background-color: var(--gray4);
+}
