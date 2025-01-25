@@ -10,6 +10,7 @@
     padding: 8px 12px;
 
     transition: background-color 0.2s ease;
+    transition: border 0.2s ease;
 
     cursor: pointer;
 
@@ -24,4 +25,5 @@
 
 .selected {
     background-color: var(--gray4);
+    border: 1px solid var(--gray10);
 }
