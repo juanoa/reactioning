@@ -2,7 +2,7 @@
 
 Just a simple library to show beautiful reactions in your app.
 
-![Demo](https://raw.githubusercontent.com/juanoa/reactioning/refs/heads/bugfix/polish-readme/assets/demo.gif)
+![Demo](https://raw.githubusercontent.com/juanoa/reactioning/refs/heads/main/assets/demo.gif)
 
 ```bash
 npm i -E reactioning
