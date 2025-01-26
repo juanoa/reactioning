@@ -42,11 +42,7 @@
     "vite-plugin-dts": "4.5.0",
     "vite-plugin-lib-inject-css": "2.2.1"
   },
-  "keywords": [
-    "react",
-    "reactions",
-    "library"
-  ],
+  "keywords": ["react", "reactions", "like-button", "emoji", "feedback-component"],
   "author": "Juan Otálora <juanoa.otalora@gmail.com>",
   "license": "MIT",
   "repository": {
