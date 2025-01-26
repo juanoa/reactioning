@@ -51,10 +51,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/reactioning.git"
+    "url": "https://github.com/juanoa/reactioning.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/reactioning/issues"
+    "url": "https://github.com/juanoa/reactioning/issues"
   },
-  "homepage": "https://github.com/yourusername/reactioning#readme"
+  "homepage": "https://github.com/juanoa/reactioning#readme"
 }
