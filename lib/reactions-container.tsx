@@ -10,10 +10,10 @@ export type Reaction = {
 };
 
 export type Reactions = {
-  thumbUp: Reaction;
-  hearth: Reaction;
-  thumbDown: Reaction;
-  rocket: Reaction;
+  thumbUp?: Reaction;
+  hearth?: Reaction;
+  thumbDown?: Reaction;
+  rocket?: Reaction;
 };
 
 export interface ReactionsContainerProps {
@@ -28,13 +28,13 @@ export const ReactionsContainer = ({
   const { thumbUp, hearth, thumbDown, rocket } = values;
   return (
     <div className={styles.root}>
-      <ThumbUpReaction reaction={thumbUp} onClick={() => onClick("thumbUp")} />
-      <HearthReaction reaction={hearth} onClick={() => onClick("hearth")} />
-      <ThumbDownReaction
+      {thumbUp && <ThumbUpReaction reaction={thumbUp} onClick={() => onClick("thumbUp")} />}
+      {hearth && <HearthReaction reaction={hearth} onClick={() => onClick("hearth")} />}
+      {thumbDown && <ThumbDownReaction
         reaction={thumbDown}
         onClick={() => onClick("thumbDown")}
-      />
-      <RocketReaction reaction={rocket} onClick={() => onClick("rocket")} />
+      />}
+      {rocket && <RocketReaction reaction={rocket} onClick={() => onClick("rocket")} />}
     </div>
   );
 };
