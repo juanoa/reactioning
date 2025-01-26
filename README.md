@@ -2,6 +2,11 @@
 
 Just a simple library to show beautiful reactions in your app.
 
+[![npm version](https://img.shields.io/npm/v/reactioning)](https://www.npmjs.com/package/reactioning)
+[![Package size](https://img.shields.io/bundlephobia/min/reactioning)](https://bundlephobia.com/package/reactioning)
+[![npm monthly downloads](https://img.shields.io/npm/dm/reactioning)](https://www.npmjs.com/package/reactioning)
+[![License](https://img.shields.io/npm/l/reactioning)](https://github.com/juanoa/reactioning/blob/main/LICENSE)
+
 ![Demo](https://raw.githubusercontent.com/juanoa/reactioning/refs/heads/main/assets/demo.gif)
 
 ```bash
