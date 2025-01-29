@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ReactionsContainer, { Reactions } from "../lib/main";
 
 export const App = () => {
@@ -9,6 +9,7 @@ export const App = () => {
   });
 
   const handleClick = (
+    _: React.MouseEvent<HTMLDivElement>,
     reaction: "thumbUp" | "hearth" | "thumbDown" | "rocket"
   ) => {
     setReactions((prev) => {

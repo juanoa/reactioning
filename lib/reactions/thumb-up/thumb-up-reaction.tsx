@@ -1,19 +1,18 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { ThumbUpIcon } from "./thumb-up-icon";
 import { ReactionContainer } from "../reaction-container";
 import { Reaction } from "../../reactions-container";
 import styles from "./thumb-up-reaction.module.css";
 
-interface Props {
+interface Props extends React.HTMLProps<HTMLDivElement> {
   reaction: Reaction;
-  onClick: () => void;
 }
 
-export const ThumbUpReaction = ({ reaction, onClick }: Props) => {
+export const ThumbUpReaction = ({ reaction, onClick, ...props }: Props) => {
   const [isClicked, setIsClicked] = useState(false);
 
-  const handleClick = () => {
-    onClick();
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    onClick?.(e);
     if (reaction.selected) return;
 
     setIsClicked(true);
@@ -23,7 +22,7 @@ export const ThumbUpReaction = ({ reaction, onClick }: Props) => {
   };
 
   return (
-    <ReactionContainer reaction={reaction} onClick={handleClick}>
+    <ReactionContainer reaction={reaction} onClick={handleClick} {...props}>
       <ThumbUpIcon
         className={`${styles.icon} ${isClicked ? styles.animate : ""}`}
       />

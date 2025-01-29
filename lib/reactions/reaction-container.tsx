@@ -1,6 +1,7 @@
-import styles from "./reaction-container.module.css";
+import React from "react";
 import { Reaction } from "../reactions-container";
 import NumberFlow from "@number-flow/react";
+import styles from "./reaction-container.module.css";
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   reaction: Reaction;

@@ -33,6 +33,7 @@ export const App = () => {
   });
 
   const handleClick = (
+    e: React.MouseEvent<HTMLDivElement>,
     reaction: "thumbUp" | "hearth" | "thumbDown" | "rocket"
   ) => {
     setReactions((prev) => {

@@ -1,19 +1,18 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { ReactionContainer } from "../reaction-container";
 import { ThumbDownIcon } from "./thumb-down-icon";
 import { Reaction } from "../../reactions-container";
 import styles from "./thumb-down-reaction.module.css";
 
-interface Props {
+interface Props extends React.HTMLProps<HTMLDivElement> {
   reaction: Reaction;
-  onClick: () => void;
 }
 
-export const ThumbDownReaction = ({ reaction, onClick }: Props) => {
+export const ThumbDownReaction = ({ reaction, onClick, ...props }: Props) => {
   const [isClicked, setIsClicked] = useState(false);
 
-  const handleClick = () => {
-    onClick();
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    onClick?.(e);
     if (reaction.selected) return;
 
     setIsClicked(true);
@@ -23,7 +22,7 @@ export const ThumbDownReaction = ({ reaction, onClick }: Props) => {
   };
 
   return (
-    <ReactionContainer reaction={reaction} onClick={handleClick}>
+    <ReactionContainer reaction={reaction} onClick={handleClick} {...props}>
       <ThumbDownIcon
         className={`${styles.icon} ${isClicked ? styles.animate : ""}`}
       />

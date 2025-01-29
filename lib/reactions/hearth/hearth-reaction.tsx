@@ -2,15 +2,15 @@ import { ReactionContainer } from "../reaction-container";
 import { HearthIcon } from "./hearth-icon";
 import { Reaction } from "../../reactions-container";
 import styles from "./hearth-reaction.module.css";
+import React from "react";
 
-interface Props {
+interface Props  extends React.HTMLProps<HTMLDivElement> {
   reaction: Reaction;
-  onClick: () => void;
 }
 
-export const HearthReaction = ({ reaction, onClick }: Props) => {
+export const HearthReaction = ({ reaction, onClick, ...props }: Props) => {
   return (
-    <ReactionContainer reaction={reaction} onClick={onClick}>
+    <ReactionContainer reaction={reaction} onClick={onClick} {...props}>
       <HearthIcon className={styles.icon} />
     </ReactionContainer>
   );

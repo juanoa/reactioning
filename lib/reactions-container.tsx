@@ -3,6 +3,7 @@ import { HearthReaction } from "./reactions/hearth/hearth-reaction";
 import { RocketReaction } from "./reactions/rocket/rocket-reaction";
 import { ThumbDownReaction } from "./reactions/thumb-down/thumb-down-reaction";
 import { ThumbUpReaction } from "./reactions/thumb-up/thumb-up-reaction";
+import React from "react";
 
 export type Reaction = {
   count: number;
@@ -18,7 +19,7 @@ export type Reactions = {
 
 export interface ReactionsContainerProps {
   values: Reactions;
-  onClick: (reaction: "thumbUp" | "hearth" | "thumbDown" | "rocket") => void;
+  onClick: (e: React.MouseEvent<HTMLDivElement>, reaction: "thumbUp" | "hearth" | "thumbDown" | "rocket") => void;
 }
 
 export const ReactionsContainer = ({
@@ -28,13 +29,13 @@ export const ReactionsContainer = ({
   const { thumbUp, hearth, thumbDown, rocket } = values;
   return (
     <div className={styles.root}>
-      {thumbUp && <ThumbUpReaction reaction={thumbUp} onClick={() => onClick("thumbUp")} />}
-      {hearth && <HearthReaction reaction={hearth} onClick={() => onClick("hearth")} />}
+      {thumbUp && <ThumbUpReaction reaction={thumbUp} onClick={(e) => onClick(e, "thumbUp")} />}
+      {hearth && <HearthReaction reaction={hearth} onClick={(e) => onClick(e, "hearth")} />}
       {thumbDown && <ThumbDownReaction
         reaction={thumbDown}
-        onClick={() => onClick("thumbDown")}
+        onClick={(e) => onClick(e, "thumbDown")}
       />}
-      {rocket && <RocketReaction reaction={rocket} onClick={() => onClick("rocket")} />}
+      {rocket && <RocketReaction reaction={rocket} onClick={(e) => onClick(e, "rocket")} />}
     </div>
   );
 };
